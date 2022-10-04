@@ -3,10 +3,11 @@ window.onload = function () {
   const body = document.body;
   let planetCount = 0
   let scoreClick = 0
+  let startingPlanet = 5
 
   function createPlanet() {
     planetCount++
-    clicks = 4 * planetCount
+    clicks = 25
     let planet = document.createElement("div");
     planet.classList.add("planet");
     body.append(planet);
@@ -28,7 +29,7 @@ window.onload = function () {
     console.log(`clicks ${clicks}`)
   }
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < startingPlanet; i++) {
     createPlanet();
   }
 
@@ -47,7 +48,11 @@ window.onload = function () {
   function checkForWinner() {
     let planets = document.querySelectorAll(".planet");
     if (planets.length < 2) {
-      alert(`You Won! you used ${scoreClick / planetCount} shots per target`);
+      alert(`You Won! 
+      you used ${scoreClick / planetCount} shots per target! 
+      you missed ${scoreClick - startingPlanet} Shots!
+      you had a shooting percentage of ${(startingPlanet / scoreClick) * 100}`);
+      
       window.location.reload();
     }
   }
@@ -63,14 +68,14 @@ window.onload = function () {
 
   function endGame() {
     if (clicks < 1) {
-      alert("You Lose, you ran out of clicks");
+      alert("You Suck!! you ran out of Ammo");
       window.location.reload();
     }
   }
 };
 
 
-//add scoring and accuracy stats at the end of each level and reset automatically
+//make it so instead of reseting it adds an astroid and goes to the next level
 //make it so the "i < 5" on line 30 is dinamic based on the level
 //code css popup at the end of each round
 //code rounds that get harder and harder
