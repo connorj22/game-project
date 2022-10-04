@@ -7,9 +7,9 @@ window.onload = function () {
   let startTitle = document.querySelector("#startTitle")
 
   startTitle.addEventListener("click", () => game());
-  
+
   function game() {
-    startTitle.innerHTML = ``
+    startTitle.remove()
     function createPlanet() {
       planetCount++;
       clicks = 26;
@@ -80,9 +80,10 @@ window.onload = function () {
   }
 };
 
-//add flashing "click anywhere to start" that disapears when you start
+
 //make it so instead of reseting it adds an astroid and goes to the next level
 //make it so the "i < 5" on line 30 is dinamic based on the level
 //code css popup at the end of each round
+//fix delay at begining of round
 //code rounds that get harder and harder
 //make explosion animation different by cycling backround posistion image each time
