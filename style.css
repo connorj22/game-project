@@ -17,13 +17,16 @@ html {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .planet.shot {
   background-position: center;
   background-image: url(images/Explosion.png);
   background-position: 27% 50%;
-
 }
 
+body {
+  cursor: url(images/pngwing.com.png), crosshair;
+}
 

@@ -1,4 +1,3 @@
-
 window.onload = function () {
   const body = document.body;
 
@@ -21,7 +20,7 @@ window.onload = function () {
     }
     setInterval(() => {
       movePlanet(planet);
-    }, 1000);
+    }, Math.floor(Math.random() * (2000 - 800)) + 800);
   }
  
   for (let i = 0; i < 5; i++) {
@@ -48,8 +47,8 @@ window.onload = function () {
 }
 
 
-//orginize code
-//change movement to be more smooth
+//code rounds that get harder and harder
 //code css popup at the end of each round
-//make explosion animation different by cycling backround posistion image each time
+//code it so you only have a limited number of shots
 //add scoring, accuracy, and time stats at the end of each level
+//make explosion animation different by cycling backround posistion image each time
