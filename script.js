@@ -1,7 +1,7 @@
 window.onload = function () {
+  let clicks = 0;
   const body = document.body;
 
-  console.log(body);
   function createPlanet() {
     let planet = document.createElement("div");
     planet.classList.add("planet");
@@ -9,7 +9,6 @@ window.onload = function () {
 
     planet.style.top = `${Math.random() * window.innerHeight}px`;
     planet.style.left = `${Math.random() * window.innerWidth}px`;
-    
 
     function movePlanet(planetObj) {
       let top = Math.random() * window.innerHeight;
@@ -22,11 +21,11 @@ window.onload = function () {
       movePlanet(planet);
     }, Math.floor(Math.random() * (2000 - 800)) + 800);
   }
- 
+
   for (let i = 0; i < 5; i++) {
     createPlanet();
   }
- 
+
   let planets = document.querySelectorAll(".planet");
   let count = planets.length;
   planets.forEach((planet) => {
@@ -40,15 +39,30 @@ window.onload = function () {
     });
   });
 
- function checkForWinner() {
+  function checkForWinner() {
     let planets = document.querySelectorAll(".planet");
-   if (planets.length < 2) alert("YOU WIN");
+    if (planets.length < 2) {
+      alert(`You Won this took you ${clicks / 5} shots per target`);
+    }
   }
-}
+  function clickCounter() {
+    clicks++;
+    console.log(clicks);
+    endGame();
+  }
+
+  body.addEventListener("click", () => clickCounter());
+
+  function endGame() {
+    if (clicks > 29) {
+      alert("You Lose, you ran out of clicks");
+    }
+  }
+};
 
 
-//code rounds that get harder and harder
-//code css popup at the end of each round
+//add scoring and accuracy stats at the end of each level and reset automatically
 //code it so you only have a limited number of shots
-//add scoring, accuracy, and time stats at the end of each level
+//code css popup at the end of each round
+//code rounds that get harder and harder
 //make explosion animation different by cycling backround posistion image each time
