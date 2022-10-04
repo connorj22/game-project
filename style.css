@@ -17,8 +17,8 @@ html {
 .planet {
   position: absolute;
   background-image: url(images/Baren.png);
-  width: 110px;
-  height: 115px;
+  width: 72px;
+  height: 72px;
   transition: top 2s, left 2s;
   transition-timing-function: linear;
   background-repeat: no-repeat;

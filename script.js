@@ -28,7 +28,7 @@ window.onload = function () {
       }
       setInterval(() => {
         movePlanet(planet);
-      }, Math.floor(Math.random() * (2000 - 800)) + 800);
+      }, Math.floor(Math.random() * (1500 - 500)) + 500);
     }
 
     for (let i = 0; i < startingPlanet; i++) {
@@ -81,6 +81,5 @@ window.onload = function () {
 //make it so instead of reseting it adds an astroid and prompts the next level
 //make it so the "i < 5" on line 30 is dinamic based on the level
 //code css popup at the end of each round
-//fix delay at begining of round
 //code rounds that get harder and harder
 //make explosion animation different by cycling backround posistion image each time
