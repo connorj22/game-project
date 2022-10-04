@@ -2,6 +2,7 @@ window.onload = function () {
   let clicks = 0;
   const body = document.body;
   let planetCount = 0
+  let scoreClick = 0
 
   function createPlanet() {
     planetCount++
@@ -40,23 +41,24 @@ window.onload = function () {
         planet.remove(planet);
         count--;
       }, 100);
-      checkForWinner();
     });
   });
 
   function checkForWinner() {
     let planets = document.querySelectorAll(".planet");
     if (planets.length < 2) {
-      alert(`You Won! you used ${clicks / planetCount} shots per target`);
+      alert(`You Won! you used ${scoreClick / planetCount} shots per target`);
       window.location.reload();
     }
   }
   body.addEventListener("click", () => clickCounter());
 
   function clickCounter() {
-    clicks--;
+    clicks--
+    scoreClick++
     document.getElementById("counter").innerHTML = ` Ammo: ${clicks}`
     endGame();
+    checkForWinner()
   }
 
   function endGame() {
@@ -69,7 +71,7 @@ window.onload = function () {
 
 
 //add scoring and accuracy stats at the end of each level and reset automatically
-//code it so you only have a limited number of shots
+//make it so the "i < 5" on line 30 is dinamic based on the level
 //code css popup at the end of each round
 //code rounds that get harder and harder
 //make explosion animation different by cycling backround posistion image each time
