@@ -82,4 +82,4 @@ window.onload = function () {
 //make it so the "i < 5" on line 30 is dinamic based on the level
 //code css popup at the end of each round
 //code rounds that get harder and harder
-//make explosion animation different by cycling backround posistion image each time
+//add simple instructions for the game on the start screen
