@@ -17,8 +17,8 @@ html {
 .planet {
   position: absolute;
   background-image: url(images/Baren.png);
-  width: 72px;
-  height: 72px;
+  width: 85px;
+  height: 85px;
   transition: top 2s, left 2s;
   transition-timing-function: linear;
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@ body {
   justify-content: center;
   margin: 0px;
   color: white;
-  animation: blink 2s steps(1, end) infinite;
+  animation: blink 1.5s steps(1, end) infinite;
   font-size: 50px;
   }
   
