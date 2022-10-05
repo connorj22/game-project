@@ -11,7 +11,6 @@ window.onload = function () {
 
   function game() {
 
-    body.removeEventListener("click", () => clickCounter())
     startingPlanet++
     if (startingPlanet > 5) clicks = 25
 
@@ -89,7 +88,7 @@ window.onload = function () {
 //problems: plants speed is doubling when leveling up and clicks are decreasing by 2 when leveling up
 //line 62 is the problem but dont know how to fix
 //try adding a resart/next level function that adds the variables then re runs the game
-//try reorginizing code
+//try reoginizing the code so game() only had functions of gameplay and another function handles the iteration
 
 //make it so instead of reseting it adds an astroid and starts the next level
 //code css popup at the end of each round and one when you loose that says the level you were on
