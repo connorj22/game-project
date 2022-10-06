@@ -4,20 +4,58 @@ let clicks = 26;
 const body = document.body;
 let planetCount = 0;
 let scoreClick = 0;
-let startingPlanet = 4;
+let startingPlanet = 5;
 let i = 0
+let menu = document.querySelector(".levelContainer")
+
+menu.style.display = "none"
 
 function start() {
   console.log("start function called")
   let startTitle = document.querySelector("#startTitle");
   startTitle.remove();
+  menu.style.display = "grid"
+}
+let easy = document.querySelector(".easy")
+easy.addEventListener("click", () => easyMode())
+
+function easyMode() {
+  startingPlanet = 5
   gameBrain();
+  menu.style.display = "none"
 }
 
+let medium = document.querySelector(".medium")
+medium.addEventListener("click", () => mediumMode())
+
+function mediumMode() {
+  startingPlanet = 10
+  gameBrain();
+  menu.style.display = "none"
+}
+
+let hard = document.querySelector(".hard")
+hard.addEventListener("click", () => hardMode())
+
+function hardMode() {
+  startingPlanet = 15
+  gameBrain();
+  menu.style.display = "none"
+}
+
+let impossible = document.querySelector(".impossible")
+impossible.addEventListener("click", () => impossibleMode())
+
+function impossibleMode() {
+  startingPlanet = 20
+  gameBrain();
+  menu.style.display = "none"
+}
+
+
+
 function gameBrain() {
-  console.log("brain function called")
-  startingPlanet++;
-  if (startingPlanet > 5) clicks = 25;
+  console.log(startingPlanet)
   scoreClick = 0;
   planetCount = 0
 
@@ -49,8 +87,7 @@ function gameBrain() {
   game()
 }
 
-function game() {
-  if (i < 1) {
+  function game() {
     function checkForWinner() {
       let planets = document.querySelectorAll(".planet");
       if (planets.length < 2) {
@@ -96,15 +133,9 @@ function game() {
         window.location.reload();
       }
     }
-  } else {
-    console.log("game has stopped")
   }
-}
-//problems: plants speed is doubling when leveling up and clicks are decreasing by 2 when leveling up
-//line 62 is the problem but dont know how to fix
-//try adding a resart/next level function that adds the variables then re runs the game
-//try reoginizing the code so game() only had functions of gameplay and another function handles the iteration
 
-//make it so instead of reseting it adds an astroid and starts the next level
+
+//make it so theirs four dificulties that we you can select from to start
 //code css popup at the end of each round and one when you loose that says the level you were on
 //add simple instructions for the game on the start screen
