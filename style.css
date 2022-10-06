@@ -170,3 +170,48 @@ body {
   margin: 0px;
   color: white;
 }
+
+.endScreen{
+  grid-row: 2;
+  grid-column: 2;
+  color:white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.winner{
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  margin: 0px;
+}
+
+.loser{
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  margin: 0px;
+}
+
+.stats{
+  grid-row: 2;
+  grid-column: 1;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 0px;
+}
+
+.reset{
+  grid-row: 3;
+  grid-column: 1;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 0px;
+}
