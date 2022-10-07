@@ -139,7 +139,3 @@ function gameBrain() {
   let reset = document.querySelector(".reset")
   reset.addEventListener("click", () => window.location.reload())
 
-
-//make the stats centered
-//change font to be pixelated
-//add simple instructions for the game on the start screen
