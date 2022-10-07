@@ -92,11 +92,12 @@ function gameBrain() {
       let planets = document.querySelectorAll(".planet");
       if (planets.length < 2) {
         endScreen.style.display = "grid"
-        stats.innerHTML = `You Won! 
+        stats.innerHTML = `
         you used ${(scoreClick - 1) / planetCount} shots per target! 
         you missed ${scoreClick - 1 - startingPlanet} Shots!
         you had a shooting percentage of ${(startingPlanet / (scoreClick - 1)) * 100
-        }`
+      }`
+      stats.style.display = "flex"
         winner.style.display = "grid" 
         loser.style.display = "none"
       }
@@ -137,6 +138,6 @@ function gameBrain() {
   reset.addEventListener("click", () => window.location.reload())
 
 
-//fix bug where plants wont disapear when you lose and make the stats centered
+//make the stats centered
 //change font to be pixelated
 //add simple instructions for the game on the start screen
