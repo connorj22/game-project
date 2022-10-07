@@ -12,10 +12,12 @@ let stats = document.querySelector(".stats")
 let winner = document.querySelector(".winner")
 let loser = document.querySelector(".loser")
 let planets = document.querySelectorAll(".planet")
+let instructions = document.querySelector(".instructions")
 
 function start() {
   let startTitle = document.querySelector("#startTitle");
   startTitle.remove();
+  instructions.remove()
   menu.style.display = "grid"
 }
 let easy = document.querySelector(".easy")
@@ -94,8 +96,8 @@ function gameBrain() {
         endScreen.style.display = "grid"
         stats.innerHTML = `
         you used ${(scoreClick - 1) / planetCount} shots per target! 
-        you missed ${scoreClick - 1 - startingPlanet} Shots!
-        you had a shooting percentage of ${(startingPlanet / (scoreClick - 1)) * 100
+        and missed ${scoreClick - startingPlanet} Shots!
+        which is a shooting percentage of ${Math.floor((startingPlanet / (scoreClick - 1)) * 100)
       }`
       stats.style.display = "flex"
         winner.style.display = "grid" 
