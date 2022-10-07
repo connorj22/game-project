@@ -111,6 +111,7 @@ function gameBrain() {
           planet.remove(planet);
           count--;
         }, 100);
+      checkForWinner();
       });
     });
 
@@ -121,16 +122,13 @@ function gameBrain() {
       clicks--;
       scoreClick++;
       document.getElementById("counter").innerHTML = ` Ammo: ${clicks}`;
-      endGame();
-      checkForWinner();
+      endGame()
     }
 
     function endGame() {
       if (clicks < 1) {
-        endScreen.style.display = "grid"
-        loser.style.display = "grid"
-        winner.style.display = "none"
-        planets.style.display = "none"
+        alert("You Suck")
+        window.location.reload()
       }
     }
   }
