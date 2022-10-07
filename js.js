@@ -130,7 +130,7 @@ function gameBrain() {
 
     function endGame() {
       if (clicks < 1) {
-        alert("You Suck")
+        alert("You Suck, like really really badly")
         window.location.reload()
       }
     }
