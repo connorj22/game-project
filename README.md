@@ -9,6 +9,7 @@ The game is deployed on GitHub Pages so all you will need to do is click the lin
 ## Deployment
 
 The game should already be deployed and playable
+https://634372048fe4800c73f8df8b--teal-praline-cc1dcc.netlify.app 
 
 ## Additional Documentation and Acknowledgments
 
